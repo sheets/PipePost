@@ -1,0 +1,37 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %title Inspira - Your Inspiration!
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "Responsive Minimal Bootstrap Theme", name: "description"}/
+    %meta{content: "responsive,minimal,bootstrap,theme", name: "keywords"}/
+    %meta{content: "", name: "author"}/
+    /
+      CSS Files
+      \==================================================
+    =stylesheet_link_tag('static_pages')
+    /Javascript Files
+    /==================================================
+    =javascript_include_tag("jquery.min.js")
+    =javascript_include_tag("bootstrap.min.js")
+    =javascript_include_tag("jquery.isotope.min.js")
+    =javascript_include_tag("jquery.prettyPhoto.js")
+    =javascript_include_tag("easing.js")
+    =javascript_include_tag("jquery.ui.totop.js")
+    =javascript_include_tag("selectnav.js")
+    =javascript_include_tag("ender.js")
+    =javascript_include_tag("jquery.lazyload.js")
+    =javascript_include_tag("rs-plugin/js/jquery.themepunch.revolution.min.js")
+    =javascript_include_tag("jquery.flexslider-min.js")
+    =javascript_include_tag("custom.js")
+    / Javascript Files for current page only
+    %script{src: "/assets/rev-setting-1.js"}
+  %body
+    #wrapper
+      = render "/static_pages/partials/top_sliding_bar"
+      = yield
+
+
+
+

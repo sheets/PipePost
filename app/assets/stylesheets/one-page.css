@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+/* -------------------------------------------------- */
+/* parallax section */
+/* -------------------------------------------------- */
+#welcome{
+	padding:20% 0 20% 0;
+	background:url(../images/bg-1.jpg) top center;
+}
+
+#about{
+	padding:5% 0 5% 0;
+}
+
+#testi{
+	padding:15% 0 15% 0;
+	background:url(../images/bg-2.jpg) top center;
+}
+
+#services{
+	padding:5% 0 5% 0;
+	background:#fff;
+}
+
+#team{
+	padding:5% 0 5% 0;
+	background:#fff;
+}
+
+#work{
+	padding:5% 0 5% 0;
+	background:url(../images/bg-3.jpg) top center;
+}
+
+
+#mainmenu a{
+	outline:none;
+}
+
+
+#contact section{
+	padding:5% 0 5% 0;
+}
+
+
+.one-page h2{
+	border-top:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+	margin-bottom:20px;
+	padding:15px 0 15px 0;
+	text-transform:uppercase;
+	letter-spacing:5px;
+	text-align:center;
+}
+
+.white{
+	color:#fff;
+}
+
+/* overide */
+#filters a{
+	background:#fff;
+	border:solid 1px #fff;
+	color:#555;
+}
+
+/* -------------------------------------------------- 
+	design for 320px & 480px custom
+/* -------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+	.one-page h1{
+		font-size:32px;
+	}
+}
