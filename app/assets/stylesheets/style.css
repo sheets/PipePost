@@ -16,83 +16,83 @@ body {
 }
 
     body.p1 {
-        background-image: url(../images/bg-pattern/p1.png);
+        background-image: url(bg-pattern/p1.png);
     }
 
     body.p2 {
-        background-image: url(../images/bg-pattern/p2.png);
+        background-image: url(bg-pattern/p2.png);
     }
 
     body.p3 {
-        background-image: url(../images/bg-pattern/p3.png);
+        background-image: url(bg-pattern/p3.png);
     }
 
     body.p4 {
-        background-image: url(../images/bg-pattern/p4.png);
+        background-image: url(bg-pattern/p4.png);
     }
 
     body.p5 {
-        background-image: url(../images/bg-pattern/p5.png);
+        background-image: url(bg-pattern/p5.png);
     }
 
     body.p6 {
-        background-image: url(../images/bg-pattern/p6.png);
+        background-image: url(bg-pattern/p6.png);
     }
 
     body.p7 {
-        background-image: url(../images/bg-pattern/p7.png);
+        background-image: url(bg-pattern/p7.png);
     }
 
     body.p8 {
-        background-image: url(../images/bg-pattern/p8.png);
+        background-image: url(bg-pattern/p8.png);
     }
 
     body.p9 {
-        background-image: url(../images/bg-pattern/p9.png);
+        background-image: url(bg-pattern/p9.png);
     }
 
     body.p10 {
-        background-image: url(../images/bg-pattern/p10.png);
+        background-image: url(bg-pattern/p10.png);
     }
 
     body.p11 {
-        background-image: url(../images/bg-pattern/p11.png);
+        background-image: url(bg-pattern/p11.png);
     }
 
     body.p12 {
-        background-image: url(../images/bg-pattern/p12.png);
+        background-image: url(bg-pattern/p12.png);
     }
 
     body.p13 {
-        background-image: url(../images/bg-pattern/p13.png);
+        background-image: url(bg-pattern/p13.png);
     }
 
     body.p14 {
-        background-image: url(../images/bg-pattern/p14.png);
+        background-image: url(bg-pattern/p14.png);
     }
 
     body.p15 {
-        background-image: url(../images/bg-pattern/p15.png);
+        background-image: url(bg-pattern/p15.png);
     }
 
     body.p16 {
-        background-image: url(../images/bg-pattern/p16.png);
+        background-image: url(bg-pattern/p16.png);
     }
 
     body.p17 {
-        background-image: url(../images/bg-pattern/p17.png);
+        background-image: url(bg-pattern/p17.png);
     }
 
     body.p18 {
-        background-image: url(../images/bg-pattern/p18.png);
+        background-image: url(bg-pattern/p18.png);
     }
 
     body.p19 {
-        background-image: url(../images/bg-pattern/p19.png);
+        background-image: url(bg-pattern/p19.png);
     }
 
     body.p20 {
-        background-image: url(../images/bg-pattern/p20.png);
+        background-image: url(bg-pattern/p20.png);
     }
 
 
@@ -457,11 +457,11 @@ footer {
     height: 51px;
     border: none;
     text-indent: -999px;
-    background: url(../images/ui.totop.png) no-repeat left top;
+    background: url(ui.totop.png) no-repeat left top;
 }
 
 #toTopHover {
-    background: url(../images/ui.totop.png) no-repeat left -51px;
+    background: url(ui.totop.png) no-repeat left -51px;
     width: 51px;
     height: 51px;
     display: block;
@@ -506,28 +506,28 @@ footer {
 
     .blog-list li {
         list-style: none;
-        background: url(../images/dotwhite50.png);
+        background: url(dotwhite50.png);
         line-height: 1.7em;
     }
 
 .blog-header .by {
     display: inline-block;
     float: left;
-    background: url(../images/icon-user.png) left center no-repeat;
+    background: url(icon-user.png) left center no-repeat;
     padding-left: 24px;
 }
 
 .blog-header .cat {
     display: inline-block;
     float: left;
-    background: url(../images/icon-folder.png) left center no-repeat;
+    background: url(icon-folder.png) left center no-repeat;
     padding-left: 24px;
 }
 
 .blog-header .news-date {
     display: inline-block;
     float: left;
-    background: url(../images/icon-folder.png) left center no-repeat;
+    background: url(icon-folder.png) left center no-repeat;
     padding-left: 24px;
 }
 /* blog list */
@@ -556,11 +556,11 @@ footer {
     display: block;
     width: 60px;
     height: 40px;
-    background: url(../images/arrow-2.png) right center no-repeat #555;
+    background: url(arrow-2.png) right center no-repeat #555;
 }
 
     .blog-list a.readmore:hover {
-        background: url(../images/arrow-2.png) left center no-repeat #E1704B;
+        background: url(arrow-2.png) left center no-repeat #E1704B;
     }
 
 .blog-list .preview {
@@ -663,21 +663,21 @@ footer {
 .blog-header .by {
     display: inline-block;
     float: left;
-    background: url(../images/icon-user.png) left center no-repeat;
+    background: url(icon-user.png) left center no-repeat;
     padding-left: 24px;
 }
 
 .blog-header .cat {
     display: inline-block;
     float: left;
-    background: url(../images/icon-folder.png) left center no-repeat;
+    background: url(icon-folder.png) left center no-repeat;
     padding-left: 24px;
 }
 
 .blog-header .news-date {
     display: inline-block;
     float: left;
-    background: url(../images/icon-folder.png) left center no-repeat;
+    background: url(icon-folder.png) left center no-repeat;
     padding-left: 24px;
 }
 /* blog list */
@@ -830,7 +830,7 @@ footer {
 /* -------------------------------------------------- */
 #slider {
     padding: 40px 0 40px 0;
-    background: url(../images/bg-blur-1.jpg) top no-repeat fixed;
+    background: url(bg-blur-1.jpg) top no-repeat fixed;
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
@@ -1649,29 +1649,29 @@ i.black {
 /* parallax content */
 /* -------------------------------------------------- */
 #sample-parallax-1 {
-    background: url(../images/bg-blur-1.jpg) top no-repeat fixed;
+    background: url(bg-blur-1.jpg) top no-repeat fixed;
 }
 
 #sample-parallax-2 {
-    background: url(../images/bg-blur-2.jpg) top no-repeat fixed;
+    background: url(bg-blur-2.jpg) top no-repeat fixed;
 }
 
 #sample-parallax-3 {
-    background: url(../images/bg-blur-3.jpg) top no-repeat fixed;
+    background: url(bg-blur-3.jpg) top no-repeat fixed;
 }
 
 #sample-parallax-4 {
-    background: url(../images/bg-blur-4.jpg) top no-repeat fixed;
+    background: url(bg-blur-4.jpg) top no-repeat fixed;
 }
 
 #full-content-1 {
-    background: url(../images/bg-full-content-1.jpg) top no-repeat fixed;
+    background: url(bg-full-content-1.jpg) top no-repeat fixed;
     padding: 60px 0 0 0;
     color: #fff;
 }
 
 #full-content-2 {
-    background: url(../images/bg-blur-5.jpg) top no-repeat fixed;
+    background: url(bg-blur-5.jpg) top no-repeat fixed;
     padding: 60px 0 0 0;
     color: #fff;
 }
@@ -1683,12 +1683,12 @@ i.black {
 }
 
 #intro-portfolio {
-    background: url(../images/bg-blur-6.jpg) top no-repeat fixed;
+    background: url(bg-blur-6.jpg) top no-repeat fixed;
     padding: 130px 0 130px 0;
 }
 
 #bg-portfolio {
-    background: url(../images/bg-blur-7.jpg) top no-repeat fixed;
+    background: url(bg-blur-7.jpg) top no-repeat fixed;
     padding: 50px 0 50px 0;
 }
 
@@ -1698,7 +1698,7 @@ i.black {
 }
 
 #project {
-    background: url(../images/bg-blur-7.jpg) top no-repeat fixed;
+    background: url(bg-blur-7.jpg) top no-repeat fixed;
     padding: 20px 0 20px 0;
 }
 
@@ -1783,13 +1783,13 @@ a.img-icon-url, a.img-icon-zoom {
     display: inline-block;
     width: 36px;
     height: 36px;
-    background: url(../images/icon-url.png) center no-repeat;
+    background: url(icon-url.png) center no-repeat;
     margin: 0 auto;
     margin: 0 2px 0 2px;
 }
 
 a.img-icon-zoom {
-    background: url(../images/icon-zoom.png) center no-repeat;
+    background: url(icon-zoom.png) center no-repeat;
 }
 
 
@@ -1960,7 +1960,7 @@ a.img-icon-zoom {
 
 .widget_recent_post li {
     padding-left: 20px;
-    background: url(../images/list-arrow.png) left 2px no-repeat;
+    background: url(list-arrow.png) left 2px no-repeat;
     border-bottom: solid 1px #ddd;
     padding-bottom: 7px;
     margin-bottom: 5px;
@@ -1972,7 +1972,7 @@ a.img-icon-zoom {
 
 .widget .comments li {
     padding-left: 20px;
-    background: url(../images/list-arrow.png) left 2px no-repeat;
+    background: url(list-arrow.png) left 2px no-repeat;
     border-bottom: solid 1px #eee;
     padding-bottom: 7px;
     margin-bottom: 5px;
@@ -2109,27 +2109,27 @@ address span {
 /* social-icons */
 /* -------------------------------------------------- */
 .sb-icon-facebook {
-    background: url(../images/social-icons/facebook.png) top no-repeat;
+    background: url(social-icons/facebook.png) top no-repeat;
 }
 
 .sb-icon-twitter {
-    background: url(../images/social-icons/twitter.png) top no-repeat;
+    background: url(social-icons/twitter.png) top no-repeat;
 }
 
 .sb-icon-rss {
-    background: url(../images/social-icons/rss.png) top no-repeat;
+    background: url(social-icons/rss.png) top no-repeat;
 }
 
 .sb-icon-dribbble {
-    background: url(../images/social-icons/dribbble.png) top no-repeat;
+    background: url(social-icons/dribbble.png) top no-repeat;
 }
 
 .sb-icon-linkedin {
-    background: url(../images/social-icons/linkedin.png) top no-repeat;
+    background: url(social-icons/linkedin.png) top no-repeat;
 }
 
 .sb-icon-flickr {
-    background: url(../images/social-icons/flickr.png) top no-repeat;
+    background: url(social-icons/flickr.png) top no-repeat;
 }
 
 .social-icons {
