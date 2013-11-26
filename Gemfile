@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem "haml-rails"
 gem "rvm-capistrano"
+gem "less-rails" 
+gem "twitter-bootstrap-rails"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
