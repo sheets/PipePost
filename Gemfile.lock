@@ -149,6 +149,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
+  rack (~> 1.4.5)
   rails (= 3.2.13)
   rvm-capistrano
   sass-rails (~> 3.2.3)
