@@ -1,5 +1,13 @@
 /* FONT AWESOME CORE
  * -------------------------- */
+@mixin icon-FontAwesome() {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; // fixes ie7 issues
+}
 
 [class^="icon-"],
 [class*=" icon-"] {
