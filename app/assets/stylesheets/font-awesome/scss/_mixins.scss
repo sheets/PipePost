@@ -1,11 +1,5 @@
 // Mixins
 // --------------------------
-
-@mixin icon($icon) {
-  @include icon-FontAwesome();
-  content: $icon;
-}
-
 @mixin icon-FontAwesome() {
   font-family: FontAwesome;
   font-weight: normal;
@@ -14,6 +8,13 @@
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em; // fixes ie7 issues
 }
+
+@mixin icon($icon) {
+  @include icon-FontAwesome();
+  content: $icon;
+}
+
+
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
