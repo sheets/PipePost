@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: pipepost_production
   pool: 5
-  username: rails
-  password: YkfEiRXyjF
+  username: root
+  password: 
   socket: /var/run/mysqld/mysqld.sock
