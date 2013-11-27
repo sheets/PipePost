@@ -35,6 +35,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
+  host: localhost
   database: pipepost_production
   pool: 5
   username: root
