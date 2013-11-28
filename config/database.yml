@@ -38,6 +38,6 @@ production:
   host: localhost
   database: pipepost_production
   pool: 5
-  username: root
-  password: 
-  socket: /var/run/mysqld/mysqld.sock
+  username: rails
+  password: YkfEiRXyjF
+
