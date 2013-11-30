@@ -1857,7 +1857,7 @@ a.img-icon-zoom {
 
 /* flex slider - testi slider */
 #testimonial-full {
-    background: url(../images-slider/wide1.jpg) top center !important;
+    background: url(images-slider/wide1.jpg) top center !important;
     text-align: center;
     padding: 10px 0 10px 0;
 }

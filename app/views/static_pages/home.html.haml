@@ -1,2 +1,271 @@
 /main slider attached
 = render "/static_pages/partials/main_slider"
+/ call to action
+.call-to-action
+  .container
+    .row
+      .span9
+        %h3
+          Inspira is your bussines solutions. Made with famous
+          %span.id-color Bootstrap
+          framework.
+      .span3
+        %a.btn.btn-extra-large.btn-primary{href: "#"} Get This Now!
+/ call to action close
+/ content begin
+#content.no-bottom
+  .container
+    .row
+      .span8
+        .row
+          / feature box begin
+          .feature-box-small-icon.span4
+            .inner
+              %i.icon-twitter.circle
+              .text
+                %h3 Twitter Bootstrap
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+                %a{href: "#"} Read more →
+          / feature box close
+          / feature box begin
+          .feature-box-small-icon.span4
+            .inner
+              %i.icon-mail-forward.circle
+              .text
+                %h3 Revolution Slider
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+                %a{href: "#"} Read more →
+          / feature box close
+          %hr.blank/
+          / feature box begin
+          / feature box close
+          / feature box begin
+          / feature box close
+      .span4
+        .de_testi
+          %blockquote
+            %p Again, great template and I love that it works on the computer, iPad, phone, etc.  Very clean design, keep up the great work!. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          .de_testi_by
+            .de_testi_pic
+              %img.img-circle{alt: "", src: "/assets/testi_pic%20(2).jpg"}/
+            .de_testi_company
+              %strong> Katty Wilson
+              , Microsoft
+    %hr/
+    / project begin
+    .project
+      .row
+        .span12
+          %h3.float-left Latest Projects
+          .control-slider
+            %span.prev-slider
+              %i.icon-chevron-left
+            %span.next-slider
+              %i.icon-chevron-right
+        .clearfix
+        .flexslider.pf-carousel.project-carousel
+          %ul.slides.gallery
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(1).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #1
+                      %span Photography
+                  %img{alt: "", src: "/assets/portfolio/pf%20(1).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(2).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #2
+                      %span Video
+                  %img{alt: "", src: "/assets/portfolio/pf%20(2).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(3).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #3
+                      %span Mobile
+                  %img{alt: "", src: "/assets/portfolio/pf%20(3).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(4).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #4
+                      %span Illustration
+                  %img{alt: "", src: "/assets/portfolio/pf%20(4).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(5).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #5
+                      %span Website
+                  %img{alt: "", src: "/assets/portfolio/pf%20(5).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+            %li.single-pf-item.item
+              .span3
+                .picframe
+                  %span.overlay
+                    %span.info-area
+                      %a.img-icon-url{href: "project-single.html"}
+                      %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(6).jpg", title: ""}
+                    %span.pf_text
+                      %span.project-name Project Name #6
+                      %span Website
+                  %img{alt: "", src: "/assets/portfolio/pf%20(6).jpg"}/
+                  .pf_info
+                    %h4 Project Name
+  / project close
+  / parallax content begin
+  %section#full-content-1.border-top.border-bottom.no-bottom{"data-speed" => "8", "data-type" => "background"}
+    .container
+      .row
+        .span12.text-center
+          %h1 Inspira is All in One Template. Get 'Inspira' Now!
+          %p
+            %strong Bootstrap
+            Framework + Fully
+            %strong Responsive
+            +
+            %strong Revolution
+            Slider +
+            %strong 300
+            Icons + Parallax
+          %p
+            %br/
+            %img{alt: "", "data-original" => "/assets/idevice.png", src: "/assets/idevice_preload.png"}/
+  / parallax content close
+  .container
+    .row
+      .span6
+        %h3 Latest News
+        %ul.bloglist-small
+          %li
+            .date-box
+              %span.day 28
+              %span.month SEP
+            .txt
+              %h5
+                %a{href: "css/#"} Lorem ipsum sit amet
+              %span.read Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+              %span.info
+                Sept 23, 2013 |
+                %a{href: "css/#"} Read More
+          %li
+            .date-box
+              %span.day 24
+              %span.month SEP
+            .txt
+              %h5
+                %a{href: "css/#"} Lorem ipsum sit amet
+              %span.read Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+              %span.info
+                Sept 23, 2013 |
+                %a{href: "css/#"} Read More
+          %li
+            .date-box
+              %span.day 20
+              %span.month SEP
+            .txt
+              %h5
+                %a{href: "css/#"} Lorem ipsum sit amet
+              %span.read Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+              %span.info
+                Sept 23, 2013 |
+                %a{href: "css/#"} Read More
+      .span6
+        %h3 Our Services
+        .de_tab
+          %ul.de_nav
+            %li
+              %span.active Web Design
+            %li
+              %span Illustration
+            %li
+              %span Photography
+            %li
+              %span Video
+          .de_tab_content
+            #tab1
+              %img.img-right{alt: "", src: "/assets/pic-small-3.jpg"}/
+              %span.dropcap S
+              ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam.
+
+            #tab2
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            #tab3
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            #tab4
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    %hr.blank/
+    / logo carousel
+    .row
+      .flexslider.logo-carousel.no-control
+        %ul.slides
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/1.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/2.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/3.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/4.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/5.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/6.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/7.png"}/
+          %li
+            .span2
+              %img{alt: "", src: "/assets/logo/8.png"}/
+    / logo carousel close
+  %section#testimonial-full{"data-speed" => "8", "data-type" => "background"}
+    .container
+      .row
+        .flexslider.testi-slider
+          %ul.slides
+            %li
+              %blockquote
+                "Design is in everything we make, but it's also between those things. It's a mix of craft, science, storytelling, propaganda, and philosophy."
+                %span Erick Adigard
+            %li
+              %blockquote
+                "Good design begins with honesty, asks tough questions, comes from collaboration and from trusting your intuition."
+                %span Freeman Thomas
+/ content close
