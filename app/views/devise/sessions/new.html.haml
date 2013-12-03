@@ -1,0 +1,53 @@
+.login-box
+  .icons
+    %a{href: "index.html"}
+      %i.halflings-icon.home
+    %a{href: "login.html#"}
+      %i.halflings-icon.cog
+  %h2 Login to your account
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name),:html=>{:class=>"form-horizontal"}) do |f|
+    %fieldset
+      .input-wrap
+        .input-prepend.input-group{title: "email"}
+          %span.input-group-addon
+            %i.halflings-icon.user
+          = f.email_field :email, :autofocus => true,:class=>"form-control",placeholder: "type username"
+      .input-wrap
+        .input-prepend.input-group{title: "Password"}
+          %span.input-group-addon
+            %i.halflings-icon.lock
+          = f.password_field :password,:class=>"form-control",placeholder: "type password"
+      %label.remember{for: "remember"}
+        %input#remember{type: "checkbox"}>/
+        Remember me
+      .button-login
+        %button.btn.btn-primary{type: "submit"} Login
+      .clearfix
+  %hr/
+  
+  %h3
+    = render "devise/shared/links"
+  / %h3 Forgot Password?
+  / %p
+  / No problem,
+  / %a{href: "login.html#"} click here
+  / to get a new password.
+
+
+
+/ %h2 Sign in
+/ = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+/   %div
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, :autofocus => true
+/   %div
+/     = f.label :password
+/     %br/
+/     = f.password_field :password
+/   - if devise_mapping.rememberable?
+/     %div
+/       = f.check_box :remember_me
+/       = f.label :remember_me
+/   %div= f.submit "Sign in"
+/ = render "devise/shared/links"

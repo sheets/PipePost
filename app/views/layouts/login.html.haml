@@ -1,0 +1,59 @@
+!!!
+%html{lang: "en"}
+	%head
+		/ start: Meta
+		%meta{charset: "utf-8"}/
+		%title ACME Dashboard - Perfect Bootstrap Admin Template
+		%meta{content: "ACME Dashboard Bootstrap Admin Template.", name: "description"}/
+		%meta{content: "Łukasz Holeczek", name: "author"}/
+		%meta{content: "ACME, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina", name: "keyword"}/
+		/ end: Meta
+		/ start: Mobile Specific
+		%meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+		/ end: Mobile Specific
+		/ start: CSS
+		=stylesheet_link_tag "admin/bootstrap.min.css"
+		=stylesheet_link_tag "admin/style.min.css"
+		=stylesheet_link_tag "admin/retina.min.css"
+		/ end: CSS
+		/ start: Favicon and Touch Icons
+		%link{href: "assets/ico/apple-touch-icon-144-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "144x144"}/
+		%link{href: "assets/ico/apple-touch-icon-114-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "114x114"}/
+		%link{href: "assets/ico/apple-touch-icon-72-precomposed.png", rel: "apple-touch-icon-precomposed", sizes: "72x72"}/
+		%link{href: "assets/ico/apple-touch-icon-57-precomposed.png", rel: "apple-touch-icon-precomposed"}/
+		%link{href: "assets/ico/favicon.png", rel: "shortcut icon"}/
+		/ end: Favicon and Touch Icons
+		:css
+			body { background: url("/assets/admin/bg-login.jpg") !important;}
+	%body
+	.container
+		.row
+			.row
+				=yield
+		#myModal.modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						%button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+						%h4.modal-title Modal title
+					.modal-body
+						%p Here settings can be configured...
+					.modal-footer
+						%button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+						%button.btn.btn-primary{type: "button"} Save changes
+
+	%script{src: "assets/js/jquery-2.0.3.min.js"}
+	:javascript
+		window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+	%script{src: "assets/js/jquery-migrate-1.2.1.min.js"}
+	%script{src: "assets/js/bootstrap.min.js"}
+	/ theme scripts
+	%script{src: "assets/js/custom.min.js"}
+	%script{src: "assets/js/core.min.js"}
+	/ end: JavaScript 
+	/ = yield
+
+
+
+
+
