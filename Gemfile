@@ -9,7 +9,6 @@ gem 'mysql2'
 gem "haml-rails"
 gem "rvm-capistrano"
 gem "less-rails" 
-gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'rails_admin'
 gem 'html2haml'
@@ -19,6 +18,7 @@ gem 'html2haml'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem "twitter-bootstrap-rails"
  
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
