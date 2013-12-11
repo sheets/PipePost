@@ -1,2 +1,202 @@
-%h1 StaticPages#blog
-%p Find me in app/views/static_pages/blog.html.haml
+=render "/static_pages/partials/subheader"
+/ content begin
+#content
+  .container
+    .row
+      .span9
+        %ul.blog-list
+          %li
+            .date-box
+              %span.day 20
+              %span.month SEP
+            .post-content
+              .post-image
+                .callbacks_container
+                  %ul.rslides.pic_slider
+                    %li
+                      %img{alt: "", src: "/assets/pic-blog-1.jpg"}/
+                    %li
+                      %img{alt: "", src: "/assets/pic-blog-2.jpg"}/
+              .post-text
+                %h3
+                  %a{href: "css/#"} Sed ut perspiciatis unde omnis iste natus
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum [...]
+            .post-meta
+              %span
+                %i.icon-user>
+                By:
+                %a{href: "#"} Lynda Wu
+              %span
+                %i.icon-tag
+                = succeed "," do
+                  %a{href: "#"} News
+                %a{href: "#"} Events
+              %span
+                %i.icon-comment
+                %a{href: "#"} 10 Comments
+              %span
+                %i.icon-arrow-right
+                %a{href: "#"} Read More
+          %li
+            .date-box
+              %span.day 20
+              %span.month SEP
+            .post-content
+              .post-image
+                %span.post-text
+                  %img{alt: "", src: "/assets/pic-blog-3.jpg"}/
+              .post-text
+                %h3
+                  %a{href: "#"} Sed ut perspiciatis unde omnis iste natus
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum [...]
+            .post-meta
+              %span
+                %i.icon-user>
+                By:
+                %a{href: "#"} Lynda Wu
+              %span
+                %i.icon-tag
+                = succeed "," do
+                  %a{href: "#"} News
+                %a{href: "#"} Events
+              %span
+                %i.icon-comment
+                %a{href: "#"} 10 Comments
+              %span
+                %i.icon-arrow-right
+                %a{href: "#"} Read More
+          %li
+            .date-box
+              %span.day 20
+              %span.month SEP
+            .post-content
+              .post-image
+                .callbacks_container
+                  %ul.rslides.pic_slider
+                    %li
+                      %img{alt: "", src: "/assets/pic-blog-4.jpg"}/
+                    %li
+                      %img{alt: "", src: "/assets/pic-blog-5.jpg"}/
+              .post-text
+                %h3
+                  %a{href: "css/#"} Sed ut perspiciatis unde omnis iste natus
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum [...]
+            .post-meta
+              %span
+                %i.icon-user>
+                By:
+                %a{href: "#"} Lynda Wu
+              %span
+                %i.icon-tag
+                = succeed "," do
+                  %a{href: "#"} News
+                %a{href: "#"} Events
+              %span
+                %i.icon-comment
+                %a{href: "#"} 10 Comments
+              %span
+                %i.icon-arrow-right
+                %a{href: "#"} Read More
+        .pagination.text-center
+          %ul
+            %li
+              %a{href: "#"} Prev
+            %li.active
+              %a{href: "#"} 1
+            %li
+              %a{href: "#"} 2
+            %li
+              %a{href: "#"} 3
+            %li
+              %a{href: "#"} 4
+            %li
+              %a{href: "#"} 5
+            %li
+              %a{href: "#"} Next
+      #sidebar.span3
+        .widget.widget-text
+          %h4 Text Widget
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        .widget.tab-holder
+          .de_tab
+            %ul.de_nav
+              %li
+                %span.active Popular
+              %li
+                %span Recent
+            .de_tab_content
+              .tab-small-post
+                %ul
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-1.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Sed ut perspiciatis unde
+                    %span.post-date
+                      Sept 22, 2013
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-2.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Sed ut perspiciatis unde
+                    %span.post-date
+                      Sept 22, 2013
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-3.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Sed ut perspiciatis unde
+                    %span.post-date
+                      Sept 22, 2013
+              .tab-small-post
+                %ul
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-3.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Lorem ipsum dolor sit
+                    %span.post-date
+                      Sept 22, 2013
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-2.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Lorem ipsum dolor sit
+                    %span.post-date
+                      Sept 22, 2013
+                  %li
+                    %img.post-info{alt: "", src: "/assets/news-small-1.jpg"}/
+                    %span.post-content
+                      %a{href: "#"} Lorem ipsum dolor sit
+                    %span.post-date
+                      Sept 22, 2013
+        .widget.widget_category
+          %h4 Category
+          %ul
+            %li
+              %a{href: "#"} Services
+            %li
+              %a{href: "#"} Hosting
+            %li
+              %a{href: "#"} Server
+            %li
+              %a{href: "#"} Technology
+            %li
+              %a{href: "#"} Software
+        .widget.widget_tags
+          %h4 Tags
+          %ul
+            %li
+              %a{href: "#link"} Art
+            %li
+              %a{href: "#link"} Application
+            %li
+              %a{href: "#link"} Design
+            %li
+              %a{href: "#link"} Entertainment
+            %li
+              %a{href: "#link"} Internet
+            %li
+              %a{href: "#link"} Marketing
+            %li
+              %a{href: "#link"} Music
+            %li
+              %a{href: "#link"} Print
+            %li
+              %a{href: "#link"} Programming
+/ content close

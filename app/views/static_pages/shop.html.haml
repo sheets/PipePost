@@ -1,0 +1,116 @@
+=render "/static_pages/partials/subheader"
+/ content begin
+#content
+  .container
+    .row
+      .span12
+        %ul#filters
+          %li
+            %a.selected{"data-filter" => "*", href: "#"} show all
+          %li
+            %a{"data-filter" => ".illustration", href: "#"} Illustration
+          %li
+            %a{"data-filter" => ".mobile", href: "#"} Mobile
+          %li
+            %a{"data-filter" => ".photography", href: "#"} Photography
+          %li
+            %a{"data-filter" => ".website", href: "#"} Website
+    .row
+      #gallery.gallery
+        / gallery item
+        .span4.item.mobile
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(1).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #1
+                %span Mobile
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(1).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.photography
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(2).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #2
+                %span Photography
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(2).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.website.mobile
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(3).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #3
+                %span Website, Mobile
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(3).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.illustration
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(4).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #4
+                %span Illustration
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(4).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.website.photography
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(5).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #5
+                %span Website, Photography
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(5).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.mobile
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(6).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #6
+                %span Mobile
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(6).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.illustration.photography
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(7).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #7
+                %span Illustration, Photography
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(7).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+        / gallery item
+        .span4.item.photography
+          .picframe
+            %span.overlay
+              %span.info-area
+                %a.img-icon-url{href: "project-single.html"}
+                %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: "/assets/portfolio/pf%20(8).jpg", title: ""}
+              %span.pf_text
+                %span.project-name Project Name #8
+                %span Photography
+            %img{alt: "", "data-original" => "/assets/portfolio/pf%20(8).jpg", src: "/assets/pf_blank.gif"}/
+        / close gallery item
+/ content close

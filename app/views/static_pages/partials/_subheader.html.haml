@@ -1,0 +1,16 @@
+/ subheader begin
+#subheader
+  .container
+    .row
+      .span12
+        %h1 
+          =@title.capitalize
+        %span
+          =@description.capitalize 
+        %ul.crumb
+          %li
+            =link_to "Home", static_pages_home_path
+          %li.sep /
+          %li
+            =@title.capitalize
+/ subheader close

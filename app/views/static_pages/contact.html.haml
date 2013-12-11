@@ -1,2 +1,54 @@
-%h1 StaticPages#contact
-%p Find me in app/views/static_pages/contact.html.haml
+=render "/static_pages/partials/subheader"
+=render "/static_pages/partials/map_container"
+/ content begin
+#content
+  .container
+    .row
+      .span8
+        %h4 Get in touch with us now!
+        Feel free to contact us by contact to get more information.
+        %br/
+        %br/
+        .contact_form_holder
+          %form#contact.row{action: "#", method: "post", name: "form1"}
+            .span4
+              %label Name
+              %input#name.full{name: "name", type: "text"}/
+            .span4
+              %label
+                Email
+                %span.req *
+              %input#email.full{name: "email", type: "text"}/
+              #error_email.error Please check your email
+            .span8
+              %label
+                Message
+                %span.req *
+              %textarea#message.full{cols: "10", name: "message", rows: "10"}
+              #error_message.error Please check your message
+              #mail_success.success Thank you. Your message has been sent.
+              #mail_failed.error Error, email not sent
+              %p#btnsubmit
+                %input#send.btn.btn-large{type: "submit", value: "Send Now"}/
+      #sidebar.span3
+        / widget category
+        / widget tags
+        / widget text
+        .widget.widget-text
+          %h4 Our Address
+          %address
+            100 Mainstreet Center, Sydney
+            %span
+              %strong> Phone:
+              (208) 333 9296
+            %span
+              %strong> Fax:
+              (208) 333 9298
+            %span
+              %strong Email:
+              %a{href: "mailto:contact@example.com"} contact@example.com
+            %span
+              %strong Web:
+              %a{href: "#test"} http://example.com
+    .map
+/ content close
