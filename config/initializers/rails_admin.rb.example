@@ -1,11 +1,11 @@
-# RailsAdmin config file. Generated on December 04, 2013 01:08
+# RailsAdmin config file. Generated on December 12, 2013 02:37
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
 
 
   ################  Global configuration  ################
-  config.authorize_with :cancan
+
   # Set the admin name here (optional second array element will appear in red). For example:
   config.main_app_name = ['Pipepost', 'Admin']
   # or for a more dynamic name:

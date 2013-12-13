@@ -1,10 +1,13 @@
 Pipepost::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   devise_for :users
 
-  
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users 
+
+  # devise :database_authenticatable, :registerable,
+  #        :recoverable, :rememberable, :trackable, :validatable
 
   root :to => 'static_pages#home'
   get "static_pages/home"
@@ -14,6 +17,7 @@ Pipepost::Application.routes.draw do
   get "static_pages/shop"
   get "static_pages/cart"
   get "static_pages/pricing_table"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
