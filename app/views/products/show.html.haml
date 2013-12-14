@@ -1,0 +1,26 @@
+=render "/static_pages/partials/subheader"
+/ content begin
+#content
+  .container.project-view
+    .row
+      .span8
+        .post-image
+          .callbacks_container
+            %ul.rslides.pic_slider
+              %li
+                =image_tag @product.image_url(:fullsize) if @product.image?
+              / %img{src: "/assets/project-single/pic_1.jpg"}/
+              / %li
+              /   %img{src: "/assets/project-single/pic_2.jpg"}/
+              / %li
+              /   %img{src: "/assets/project-single/pic_3.jpg"}/
+              / %li
+              /   %img{src: "/assets/project-single/pic_4.jpg"}/
+      .span4
+        %h4 Project Description
+        =@product.description.html_safe rescue "No Description"
+        %br/
+        %br/
+        %button.btn.btn-primary{href: "#"} Project URL
+        %hr/
+/ content close

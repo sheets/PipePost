@@ -7,14 +7,9 @@
         %ul#filters
           %li
             %a.selected{"data-filter" => "*", href: "#"} show all
-          %li
-            %a{"data-filter" => ".illustration", href: "#"} Illustration
-          %li
-            %a{"data-filter" => ".mobile", href: "#"} Mobile
-          %li
-            %a{"data-filter" => ".photography", href: "#"} Photography
-          %li
-            %a{"data-filter" => ".website", href: "#"} Website
+          -@products.each do |product_type|
+            %li
+              =link_to product_type.product_type,"#",'data-filter' => ".#{product_type.product_type}"
     .row
       #gallery.gallery
         / gallery item

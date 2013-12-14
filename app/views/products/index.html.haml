@@ -1,0 +1,31 @@
+=render "/static_pages/partials/subheader"
+/ content begin
+#content
+  .container
+    .row
+      .span12
+        %ul#filters
+          %li
+            %a.selected{"data-filter" => "*", href: "#"} show all
+          -@products.map(&:product_type).uniq.each do |product_type|
+            %li
+              =link_to product_type,"#",'data-filter' => ".#{product_type}"
+    .row
+      #gallery.gallery
+        / gallery item
+        -@products.each do |product|
+          .span4.item{:class=>"#{product.product_type}"}
+            .picframe
+              %span.overlay
+                %span.info-area
+                  %a.img-icon-url{href: product_path(product)}
+                  %a.img-icon-zoom{"data-type" => "prettyPhoto[gallery]", href: product.image_url(:thumb), title: product.name}
+                %span.pf_text
+                  %span.project-name
+                    =product.name
+                  %span
+                    =product.product_type
+              =image_tag product.image_url(:thumb),"data-original" =>product.image_url(:thumb) if product.image?
+              / %img{alt: "", , src: "/assets/pf_blank.gif"}/
+          / close gallery item
+/ content close

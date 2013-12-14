@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
 
   def about
     @title="about"
+    @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     respond_to do |format|
       format.json
@@ -18,6 +19,7 @@ class StaticPagesController < ApplicationController
 
   def blog
     @title="blog"
+    @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     respond_to do |format|
       format.json
@@ -27,15 +29,7 @@ class StaticPagesController < ApplicationController
 
   def contact
     @title="contact us"
-    @description="Lorem ipsum dolor sit amet"
-    respond_to do |format|
-      format.json
-      format.html
-    end
-  end
-
-  def shop
-    @title="shop"
+    @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     respond_to do |format|
       format.json
@@ -45,6 +39,7 @@ class StaticPagesController < ApplicationController
 
   def cart
     @title="cart"
+    @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     respond_to do |format|
       format.json
@@ -54,6 +49,7 @@ class StaticPagesController < ApplicationController
 
   def pricing_table
     @title="pricing table"
+    @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     respond_to do |format|
       format.json

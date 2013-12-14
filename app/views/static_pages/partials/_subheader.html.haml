@@ -6,11 +6,11 @@
         %h1 
           =@title.capitalize
         %span
-          =@description.capitalize 
+          =truncate(@description.capitalize,:length=>50,:omission=>"..")
         %ul.crumb
           %li
             =link_to "Home", static_pages_home_path
           %li.sep /
           %li
-            =@title.capitalize
+            =(@breadcrumb.capitalize).html_safe
 / subheader close
