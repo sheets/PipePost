@@ -42,6 +42,7 @@ set :keep_releases, 10
 #     run "bundle install"
 #   end 
 # end
+# before 'deploy:assets:precompile','bundle:install'
 before 'deploy:assets:precompile', 'create_symlink:database_yml'
 after 'deploy:restart','unicorn:restart'
 after "deploy", "deploy:cleanup" 
@@ -50,11 +51,11 @@ namespace :create_symlink do
     run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
   end
 end
-namespace :bundle do
-  task :install do
-    run "cd #{release_path} && RAILS_ENV=production bundle install"
-  end
-end
+# namespace :bundle do
+#   task :install do
+#     run "cd #{current_path} && RAILS_ENV=production bundle install"
+#   end
+# end
 namespace :deploy do
   
   namespace :assets do

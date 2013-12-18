@@ -17,6 +17,8 @@ gem 'cancan'
 gem 'friendly_id'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'braintree'
+gem 'client_side_validations'
 
 # gem 'turbo-sprockets-rails3' ,:group=>:development
 # Gems used only for assets and not required

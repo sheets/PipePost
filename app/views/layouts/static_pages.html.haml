@@ -9,6 +9,7 @@
 		%meta{content: "", name: "author"}/
 
 		=stylesheet_link_tag('static_pages')
+		=javascript_include_tag("application")
 		=javascript_include_tag("jquery.min.js")
 		=javascript_include_tag("bootstrap.min.js")
 		=javascript_include_tag("jquery.isotope.min.js")
@@ -33,6 +34,10 @@
 				/top social bar attached
 				= render "/static_pages/partials/top_social_bar"
 				.container
+					-flash.each do |name, msg|
+						-alert_var = name == :notice ? "success" : "error"
+						.alert{:class=>"alert-#{alert_var}"}
+							= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
 					#logo
 						.inner
 							%a{href: "index.html"}

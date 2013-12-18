@@ -1,0 +1,35 @@
+/ =render "/static_pages/partials/subheader"
+/ content begin
+#content
+	.container
+		%h1 
+			Braintree Customer Form
+			%form#braintree-payment-form{action: transactions_create_customer_path, method: "POST", :validate => true}
+				/ %h2 Customer Information
+				/ %p
+				/ 	%label First Name
+				/ 	%input#first_name{name: "braintree[first_name]", type: "text"}/
+				/ %p
+				/ 	%label{for: "last_name"} Last Name
+				/ 	%input#last_name{name: "braintree[last_name]", type: "text"}/
+				/ %p
+				/ 	%label{for: "postal_code"} Postal Code
+				/ 	%input#postal_code{name: "braintree['postal_code']", type: "text"}/
+				%h2 Credit Card
+				%p
+					%label Amount
+					%input{name: "braintree[amount]", type: "text",:validate => { :presence =>true }}/
+				%p
+					%label Card Number
+					%input{autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text"}/
+				%p
+					%label CVV
+					%input{autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4", type: "text"}/
+				%p
+					%label Expiration (MM/YYYY)
+					%input{"data-encrypted-name" => "braintree[credit_card][expiration_date]", size: "2", type: "text"}/
+				%input.submit-button{type: "submit"}/
+			%script{src: "https://js.braintreegateway.com/v1/braintree.js"}
+:javascript
+	var braintree = Braintree.create("MIIBCgKCAQEA1s2p5yYR5/AL1C8yJ3MKK3lOK9QU5TVy7rN+XwzA2QfyAHBQjr04GFUZQYc8Fm4HjPAOwLLbZkrllF+7rzdfXzzzDEYqOgFO9nMQLlc8VyZswjY9toeiqiwmDt9U5AdgvJRpAiw3MakS0ABXdrQOmu6LLoswZd99w1HhdjnRd8TZerCNcp/5r9bYILvErDrXLg7l6LUm9q9tO8ZZSF1zinN+ffkIIwXv6ReRiLXqE3kKgMyDn6VzvRosEIHDlgJvEkJjTdeLBz8yUmX2zJiI0JdOTpFvI8tHGHEqHu9eJqFWa82vrdpWI2IBCgd+OCKwA/Ke9FZXpQbRHKW4YBm1bwIDAQAB");
+	braintree.onSubmitEncryptForm("braintree-payment-form");
