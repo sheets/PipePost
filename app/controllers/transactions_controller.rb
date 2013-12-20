@@ -8,7 +8,7 @@ class TransactionsController < ApplicationController
 	Braintree::Configuration.public_key = "x6h7w7tyqt7nm9f8"
 	Braintree::Configuration.private_key = "23c60ed7187c772802307c1f2d06d8bd"
 	def new
-		
+		@payment=params[:amount]
 	end
 
 	def create_customer

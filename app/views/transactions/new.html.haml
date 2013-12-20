@@ -4,21 +4,21 @@
 	.container
 		%h1 
 			Braintree Customer Form
-			%form#braintree-payment-form{action: transactions_create_customer_path, method: "POST", :validate => true}
-				/ %h2 Customer Information
-				/ %p
-				/ 	%label First Name
-				/ 	%input#first_name{name: "braintree[first_name]", type: "text"}/
-				/ %p
-				/ 	%label{for: "last_name"} Last Name
-				/ 	%input#last_name{name: "braintree[last_name]", type: "text"}/
-				/ %p
-				/ 	%label{for: "postal_code"} Postal Code
-				/ 	%input#postal_code{name: "braintree['postal_code']", type: "text"}/
+			%form#braintree-payment-form{action: transactions_create_customer_path, method: "POST", :validate => :true}
+				%h2 Customer Information
+				%p
+					%label First Name
+					%input#first_name{name: "braintree[first_name]", type: "text"}/
+				%p
+					%label{for: "last_name"} Last Name
+					%input#last_name{name: "braintree[last_name]", type: "text"}/
+				%p
+					%label{for: "postal_code"} Postal Code
+					%input#postal_code{name: "braintree['postal_code']", type: "text"}/
 				%h2 Credit Card
 				%p
 					%label Amount
-					%input{name: "braintree[amount]", type: "text",:validate => { :presence =>true }}/
+					%input{name: "braintree[amount]", type: "text",:value=>@payment,:validate => { :presence =>:true }}/
 				%p
 					%label Card Number
 					%input{autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text"}/

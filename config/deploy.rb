@@ -8,7 +8,7 @@ set :deploy_to, "/home/rails"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :rails_env, "production"
-set :rvm_ruby_string, 'ruby-1.9.3-p429@pipepost'
+set :rvm_ruby_string, 'ruby-1.9.3-p429@global'
 set :rvm_bin_path,'/usr/local/rvm/bin'
 set :rvm_path,'/usr/local/rvm'
 # set :stages, %w[staging production] 

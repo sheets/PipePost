@@ -1,5 +1,7 @@
 =render "/static_pages/partials/subheader"
 / content begin
+%form{:method=>"POST",:action=>transactions_new_path,:id=>"plan-form"}
+  =hidden_field_tag :amount
 #content
   .container
     .pricing-5-col
@@ -18,7 +20,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -35,7 +37,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box.pricing-featured
@@ -52,7 +54,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -69,7 +71,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -86,7 +88,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       .clearfix
     %hr.blank/
@@ -106,7 +108,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box.pricing-featured
@@ -123,7 +125,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -140,7 +142,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -157,7 +159,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       .clearfix
     %hr.blank/
@@ -177,7 +179,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box.pricing-featured
@@ -194,7 +196,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -211,7 +213,14 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: ""} Order Now
+            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
       / pricing box close
       .clearfix
 / content close
+/ -content_for :javascript do
+:javascript
+  $('a.btn-primary').click(function(){
+    valueTaker = $(this).parents('ul').children('li').eq(1).find('h1').text();
+    $("#amount").val(valueTaker);
+    $("#plan-form").submit();
+  })
