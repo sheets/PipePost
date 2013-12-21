@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  layout Proc.new { |controller| controller.devise_controller? ? 'login' : 'application' }
+  # layout Proc.new { |controller| controller.devise_controller? ? 'login' : 'application' }
 
 
   # path for redirection after user sign_in, depending on user role

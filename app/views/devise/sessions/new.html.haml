@@ -5,18 +5,18 @@
     %a{href: "login.html#"}
       %i.halflings-icon.cog
   %h2 Login to your account
-  = form_for(resource, :as => resource_name, :url => session_path(resource_name),:html=>{:class=>"form-horizontal"}) do |f|
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name),:html=>{:class=>"form-horizontal",:validate => true}) do |f|
     %fieldset
       .input-wrap
         .input-prepend.input-group{title: "email"}
           %span.input-group-addon
             %i.halflings-icon.user
-          = f.email_field :email, :autofocus => true,:class=>"form-control",placeholder: "type username"
+          = f.email_field :email, :autofocus => true,:class=>"form-control",placeholder: "type username",:validate => { :presence => true }
       .input-wrap
         .input-prepend.input-group{title: "Password"}
           %span.input-group-addon
             %i.halflings-icon.lock
-          = f.password_field :password,:class=>"form-control",placeholder: "type password"
+          = f.password_field :password,:class=>"form-control",placeholder: "type password",:validate => { :presence => true }
       %label.remember{for: "remember"}
         %input#remember{type: "checkbox"}>/
         Remember me

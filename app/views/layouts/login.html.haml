@@ -50,6 +50,7 @@
 	/ theme scripts
 	%script{src: "/assets/admin/custom.min.js"}
 	%script{src: "/assets/admin/core.min.js"}
+	= javascript_include_tag :defaults, "rails.validations", "rails.validations.custom"
 	/ end: JavaScript 
 	/ = yield
 

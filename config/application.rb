@@ -38,9 +38,17 @@ module Pipepost
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.autoload_paths << "#{config.root}/lib"
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
+    config.to_prepare do
+        Devise::SessionsController.layout "login"
+        Devise::RegistrationsController.layout "login"
+        Devise::ConfirmationsController.layout "login"
+        Devise::UnlocksController.layout "login"
+        Devise::PasswordsController.layout "login"
+    end
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
