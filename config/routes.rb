@@ -17,6 +17,7 @@ Pipepost::Application.routes.draw do
   get "static_pages/pricing_table",:path=>:plan
   post "transactions/new",:path=>:make_payment
   post "transactions/create_customer"
+  get "transactions/all_plan"
 
   resources :products, :path => :shop, :only => [:index,:show]
 

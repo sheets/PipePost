@@ -51,6 +51,7 @@ class StaticPagesController < ApplicationController
     @title="pricing table"
     @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
+    @plans=Plan.select("name,price")
     respond_to do |format|
       format.json
       format.html

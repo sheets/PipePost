@@ -10,9 +10,12 @@ class TransactionsController < ApplicationController
 	def new
 		@payment=params[:amount]
 	end
+	def all_plan
+		plans = Braintree::Plan.all	
+	end
 
 	def create_customer
-		result = Braintree::Transaction.sale(params[:braintree])
+		result = Braintree::Subscription.create(params[:braintree])
 		if result.success?
 			respond_to do |format|
 				format.html{redirect_to transactions_new_path,flash[:success]=>"dfdfgdfgdfg"}
