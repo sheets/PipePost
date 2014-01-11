@@ -6,9 +6,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me,:user_profiles
+  has_one :userprofile,:dependent=>:destroy
   # attr_accessible :title, :body 
   # validations
+  accepts_nested_attributes_for :userprofile
   validates :password, :email, :presence => true
   def current_admin
   	current_user && current_user.has_role?(:admin)

@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   # layout Proc.new { |controller| controller.devise_controller? ? 'login' : 'application' }
-
-
   # path for redirection after user sign_in, depending on user role
 	def after_sign_in_path_for(user)
 	  (user.has_role? :admin)? '/admin/' : root_path 

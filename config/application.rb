@@ -44,7 +44,7 @@ module Pipepost
     config.active_support.escape_html_entities_in_json = true
     config.to_prepare do
         Devise::SessionsController.layout "login"
-        Devise::RegistrationsController.layout "login"
+        Devise::RegistrationsController.layout "static_pages"
         Devise::ConfirmationsController.layout "login"
         Devise::UnlocksController.layout "login"
         Devise::PasswordsController.layout "login"

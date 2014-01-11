@@ -1,0 +1,83 @@
+=render "/static_pages/partials/subheader"
+/ content begin
+#content
+  .container.project-view
+    .row
+      .span8
+        = form_for(@user, :url => registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          %table.subscription-table
+            %tr
+              %td{:valign=>"top"}
+                %h2 Account Details
+                %div
+                  = f.label :email
+                  = f.email_field :email, :autofocus => true
+                %div
+                  = f.label :password
+                  = f.password_field :password
+                %div
+                  = f.label :password_confirmation
+                  = f.password_field :password_confirmation
+                = f.fields_for :user_profiles do |profile|
+                  %div
+                    = profile.label :first_name
+                    = profile.text_field :first_name
+                  %div
+                    = profile.label :last_name
+                    = profile.text_field :last_name
+                  %div
+                    = profile.label :company_name
+                    = profile.text_field :company_name
+                  %div
+                    = profile.label :age
+                    = profile.text_field :age
+                  %div
+                    = profile.label :phone
+                    = profile.text_field :phone
+                  %td{:valign=>"top"}
+                    %h2 Personal Details
+                    %div
+                      = profile.label :country
+                      = profile.text_field :country
+                    %div
+                      = profile.label :address
+                      = profile.text_field :address
+                    %div
+                      = profile.label :mailing_address
+                      = profile.text_field :mailing_address
+                    %div
+                      = profile.label :zip
+                      = profile.text_field :zip
+                    %div
+                      = profile.label :city
+                      = profile.text_field :city
+                    %div
+                      = profile.label :state
+                      = profile.text_field :state
+              %td{:valign=>"top"}
+                %h2 Payment Details
+                %p
+                  %label Amount
+                  %input{name: "braintree[amount]", type: "text",:value=>@payment,:class=>"required require"}/
+                %p
+                  %label Card Number
+                  %input{autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text",:class=>"required require"}/
+                %p
+                  %label CVV
+                  %input{autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4", type: "text"}/
+                %p
+                  %label Expiration (MM/YYYY)
+                  %input{"data-encrypted-name" => "braintree[credit_card][expiration_date]", size: "2", type: "text"}/
+                / %input.submit-button{type: "submit"}/
+                %div= f.submit "Sign up"
+
+
+
+
+/ = render "devise/shared/links"
+
+:css
+  .subscription-table td{
+    padding-right:100px;
+  }
