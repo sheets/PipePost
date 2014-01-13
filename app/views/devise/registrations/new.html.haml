@@ -6,7 +6,10 @@
       = form_for(@user,:url => registration_path(resource_name), :validate => true) do |f|
         = devise_error_messages!
         .feature-box.span3
-          %h2 Account Details
+          %i.icon-cog.large.circle.black
+          %h2
+            Account
+            %span.id-color Details
           %div
             = f.label :email
             = f.email_field :email,:validate => true, :autofocus => true
@@ -35,7 +38,10 @@
               = profile.text_field :phone
         .feature-box.span3
           = f.fields_for :userprofile do |profile|
-            %h2 Personal Details
+            %i.icon-user.large.circle.black
+            %h2
+              Personal
+              %span.id-color Details
             %div
               = profile.label :address
               = profile.text_field :address
@@ -55,7 +61,10 @@
               = profile.label :zip
               = profile.text_field :zip
         .feature-box.span3
-          %h2 Payment Details
+          %i.icon-money.large.circle.black
+          %h2
+            Payment
+            %span.id-color Details
           %div
             %label Card Number
             =f.text_field :card_name, autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text"
@@ -67,9 +76,6 @@
             =f.text_field :exp_date,"data-encrypted-name" => "braintree[credit_card][expiration_date]", size: "2"
           / %input.submit-button{type: "submit"}/
           %div= f.submit "Sign up",:class=>'btn btn-extra-large btn-primary'
-
-
-
 
 / = render "devise/shared/links"
 
@@ -83,3 +89,4 @@
   .field_with_errors label.message{
     color:#FF624E;
   }
+
