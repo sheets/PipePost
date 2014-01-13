@@ -19,6 +19,10 @@ Pipepost::Application.routes.draw do
   post "transactions/create_customer"
   get "transactions/all_plan"
   get '/transactions/subregion_options' => 'transactions#subregion_options'
+  devise_scope :user do
+    get 'sign_up/:plan'=>"registrations#new",:as=>:new_user_registration
+  end
+  
 
   resources :products, :path => :shop, :only => [:index,:show]
 

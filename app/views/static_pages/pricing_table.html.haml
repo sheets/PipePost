@@ -92,7 +92,7 @@
     /   / pricing box close
     /   .clearfix
     / %hr.blank/
-    .pricing-4-col.pricing-dark
+    .pricing-4-col
       / pricing box begin
       .pricing-box
         %ul
@@ -100,8 +100,7 @@
             %h4=@plans[0].name.capitalize
           %li.price-row
             %h1 
-              $
-              =@plans[0].price
+              =number_to_currency(@plans[0].price, :unit => "$")
             / %span /month
           %li Quad Core Processor
           %li Hardisk 10GB
@@ -110,7 +109,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
+            %a.btn.btn-primary{href: new_user_registration_path('monthly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box.pricing-featured
@@ -119,8 +118,7 @@
             %h4=@plans[1].name.capitalize
           %li.price-row
             %h1
-              $
-              =@plans[1].price
+              =number_to_currency(@plans[1].price, :unit => "$")
             / %span /month
           %li Quad Core Processor
           %li Hardisk 10GB
@@ -129,7 +127,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
+            %a.btn.btn-primary{href: new_user_registration_path('quarterly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -138,8 +136,7 @@
             %h4=@plans[2].name.capitalize
           %li.price-row
             %h1
-              $
-              =@plans[2].price
+              =number_to_currency(@plans[2].price, :unit => "$")
             / %span /month
           %li Quad Core Processor
           %li Hardisk 10GB
@@ -148,7 +145,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
+            %a.btn.btn-primary{href: new_user_registration_path('yearly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -157,8 +154,7 @@
             %h4=@plans[3].name.capitalize
           %li.price-row
             %h1
-              $
-              =@plans[3].price
+              =number_to_currency(@plans[3].price, :unit => "$")
             / %span /month
           %li Quad Core Processor
           %li Hardisk 10GB
@@ -167,7 +163,7 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: "javascript:void(0)"} Order Now
+            %a.btn.btn-primary{href: new_user_registration_path('lifetime')} Order Now
       .clearfix
       / pricing box close
     / %hr.blank/
