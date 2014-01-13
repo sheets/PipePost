@@ -4,11 +4,12 @@ class RegistrationsController < Devise::RegistrationsController
     @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     @user=User.new
+    @user.build_userprofile
   end
 
   def create
-  	attributeUserProfile = params[:user][:user_profiles]
-  	params[:user]=params[:user].except(:user_profiles)
+  	attributeUserProfile = params[:user][:userprofile]
+  	params[:user]=params[:user].except(:userprofile)
   	@title="Sign up"
     @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"

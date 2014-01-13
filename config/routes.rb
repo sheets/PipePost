@@ -18,6 +18,7 @@ Pipepost::Application.routes.draw do
   post "transactions/new",:path=>:make_payment
   post "transactions/create_customer"
   get "transactions/all_plan"
+  get '/transactions/subregion_options' => 'transactions#subregion_options'
 
   resources :products, :path => :shop, :only => [:index,:show]
 

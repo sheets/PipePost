@@ -20,6 +20,7 @@ gem 'rmagick'
 gem 'braintree'
 gem 'client_side_validations'
 gem 'nested_form'
+gem 'carmen-rails'
 
 # gem 'turbo-sprockets-rails3' ,:group=>:development
 # Gems used only for assets and not required
