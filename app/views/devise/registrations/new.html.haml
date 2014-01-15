@@ -32,7 +32,10 @@
               = profile.text_field :company_name
             %div
               = profile.label :age
-              = profile.text_field :age
+              #dp3.input-append.date{"data-date-format" => "dd-mm-yyyy"}
+                = profile.text_field :age, size: "16",readonly: "readonly",:style=>"width:172px;"
+                %span.add-on
+                  %i.icon-calendar
             %div
               = profile.label :phone
               = profile.text_field :phone
@@ -50,7 +53,7 @@
               = profile.text_field :mailing_address
             %div
               = profile.label :country
-              = profile.country_select :country, priority: %w(US CA), prompt: 'Please select a country'
+              = profile.country_select :country, priority: %w(US CA), prompt: 'Please select a country',:class=>"selectpicker"
             %div
               = profile.label :state
               = profile.text_field :state
@@ -73,8 +76,10 @@
             =f.text_field :cvv,autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4"
           %div
             %label Expiration (MM/YYYY)
-            =f.text_field :exp_date,"data-encrypted-name" => "braintree[credit_card][expiration_date]", size: "2"
-          / %input.submit-button{type: "submit"}/
+            #dp2.input-append.date{"data-date-format" => "mm-yyyy"}
+              =f.text_field :exp_date,"data-encrypted-name" => "braintree[credit_card][expiration_date]",size: "16",readonly: "readonly",:style=>"width:172px;"
+              %span.add-on
+                %i.icon-calendar
           %div= f.submit "Sign up",:class=>'btn btn-extra-large btn-primary'
 
 / = render "devise/shared/links"
@@ -89,4 +94,11 @@
   .field_with_errors label.message{
     color:#FF624E;
   }
+:javascript
+  $(function() {
+    $('#dp3,#dp2').datepicker({
+      pickTime: false
+    });
+  });
+  $('.selectpicker').selectpicker();
 
