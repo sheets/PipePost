@@ -14,7 +14,7 @@ Pipepost::Application.routes.draw do
   get "static_pages/blog",:path=>:blog
   get "static_pages/contact",:path=>:contact
   get "static_pages/cart",:path=>:cart
-  get "static_pages/pricing_table",:path=>:plan
+  get "static_pages/subscribe",:path=>:subscribe
   post "transactions/new",:path=>:make_payment
   post "transactions/create_customer"
   get "transactions/all_plan"
@@ -24,7 +24,7 @@ Pipepost::Application.routes.draw do
   end
   
 
-  resources :products, :path => :shop, :only => [:index,:show]
+  resources :products, :path => :store, :only => [:index,:show]
 
 
   # The priority is based upon order of creation:

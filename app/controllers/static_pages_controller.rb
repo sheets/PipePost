@@ -47,8 +47,8 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def pricing_table
-    @title="pricing table"
+  def subscribe
+    @title="Subscribe"
     @breadcrumb=@title
     @description="Lorem ipsum dolor sit amet"
     @plans=Plan.select("name,price")
