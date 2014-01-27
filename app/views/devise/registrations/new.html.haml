@@ -76,7 +76,7 @@
             =f.text_field :cvv,autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4"
           %div
             %label Expiration (MM/YYYY)
-            #dp2.input-append.date{"data-date-format" => "mm-yyyy"}
+            #dp2.input-append.date{"data-date-format" => "mm/yyyy"}
               =f.text_field :exp_date,"data-encrypted-name" => "braintree[credit_card][expiration_date]",size: "16",readonly: "readonly",:style=>"width:172px;"
               %span.add-on
                 %i.icon-calendar
@@ -100,5 +100,3 @@
       pickTime: false
     });
   });
-  $('.selectpicker').selectpicker();
-

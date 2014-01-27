@@ -7,11 +7,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,:card_details
   has_one :userprofile,:dependent=>:destroy
-  has_one :card,:dependent=>:destroy
+  has_one :customer,:dependent=>:destroy
+  has_one :subscription,class_name: "Customer",foreign_key: "subscription_id"
   # validations
   accepts_nested_attributes_for :userprofile
   attr_reader :amount,:card_name,:cvv,:exp_date
-  validates :card_name,:amount,:cvv,:exp_date,:presence => true
+  # validates :card_name,:cvv,:exp_date,:presence => true
   validates_uniqueness_of :email
   # validates :address, :age, :city, :country, :first_name, :last_name, :mailing_address, :phone, :state, :zip, :presence => true
   def current_admin
