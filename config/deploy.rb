@@ -18,7 +18,7 @@ set :bundle_without, [:development, :test]
 
 set :scm, :git
 set :repository,  "git@github.com:sheets/PipePost.git"
-set :branch, "master"
+set :branch, "staging"
 set :scm_verbose, true
 set :git_shallow_clone, 1
 set :git_enable_submodules, 1

@@ -15,7 +15,9 @@ class TransactionsController < ApplicationController
 	end	
 
 	def offline_notification
-		
+		challenge = request.params["bt_challenge"]
+  	challenge_response = Braintree::WebhookNotification.verify(challenge)
+  	return [200, challenge_response]
 	end
 	
 	def subregion_options
