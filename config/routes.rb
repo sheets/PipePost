@@ -23,12 +23,6 @@ Pipepost::Application.routes.draw do
   devise_scope :user do
     get 'sign_up/:plan'=>"registrations#new",:as=>:new_user_registration
   end
-
-  get "/webhooks" do
-    challenge = request.params["bt_challenge"]
-    challenge_response = Braintree::WebhookNotification.verify(challenge)
-    return [200, challenge_response]
-  end
   
 
   resources :products, :path => :store, :only => [:index,:show]
