@@ -19,8 +19,9 @@ class RegistrationsController < Devise::RegistrationsController
 	end
 
 	def create
+		params[:user][:userprofile_attributes]=params[:user][:state] if params[:user][:state].present?
 		attributeUserProfile=params[:user][:userprofile_attributes]
-		params[:user]=params[:user].except(:userprofile_attributes,:card_name,:cvv,:exp_date)
+		params[:user]=params[:user].except(:userprofile_attribu[:state],:card_name,:cvv,:exp_date,:state)
 		@title="Sign up"
 		@breadcrumb=@title
 		@description="Lorem ipsum dolor sit amet"
@@ -34,6 +35,7 @@ class RegistrationsController < Devise::RegistrationsController
 	def update
 		super
 	end
+	# update customer id ends here
 	# private methods
 	private
 	# check customer plan
@@ -116,5 +118,5 @@ class RegistrationsController < Devise::RegistrationsController
 			}
 		}) 
 	end
-	# update customer id ends here
+
 end 

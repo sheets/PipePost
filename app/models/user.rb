@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,:card_details
   has_one :userprofile,:dependent=>:destroy
   has_one :customer,:dependent=>:destroy
+  has_many :transactions,:dependent=>:destroy
   has_one :subscription,class_name: "Customer",foreign_key: "subscription_id"
   # validations
   accepts_nested_attributes_for :userprofile

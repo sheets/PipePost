@@ -53,10 +53,11 @@
               = profile.text_field :mailing_address
             %div
               = profile.label :country
-              = profile.country_select :country, priority: %w(US CA), prompt: 'Please select a country',:class=>"selectpicker"
+              = profile.country_select :country, priority:'', prompt: 'Please select a country',:class=>"selectpicker"
             %div
               = profile.label :state
-              = profile.text_field :state
+              = render 'transactions/subregion_select',:parent_region=>profile.object.country
+              / = profile.text_field :state
             %div
               = profile.label :city
               = profile.text_field :city
@@ -100,3 +101,11 @@
       pickTime: false
     });
   });
+  $('select#user_userprofile_attributes_country').change(function(){
+    var select_wrapper = $('#order_state_code_wrapper');
+    $('select', select_wrapper).attr('disabled', true);
+    var country_code = $(this).val();
+    var url = "/transactions/subregion_options?parent_region="+country_code
+    select_wrapper.load(url)
+  });
+  $('select').selectpicker();

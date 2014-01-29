@@ -18,13 +18,15 @@ Pipepost::Application.routes.draw do
   post "transactions/new",:path=>:make_payment
   post "transactions/create_customer"
   get "transactions/all_plan"
-  get '/transactions/subregion_options' => 'transactions#subregion_options'
+  post "transactions/offline_notification"=>"transactions#offline_notification"
+  get 'transactions/subregion_options' => 'transactions#subregion_options'
   devise_scope :user do
     get 'sign_up/:plan'=>"registrations#new",:as=>:new_user_registration
   end
   
 
   resources :products, :path => :store, :only => [:index,:show]
+
 
 
   # The priority is based upon order of creation:

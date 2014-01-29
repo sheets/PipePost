@@ -7,26 +7,17 @@ class TransactionsController < ApplicationController
 	Braintree::Configuration.merchant_id = "t99rmv6yyz6k2xvm"
 	Braintree::Configuration.public_key = "x6h7w7tyqt7nm9f8"
 	Braintree::Configuration.private_key = "23c60ed7187c772802307c1f2d06d8bd"
-	def new
-		@payment=params[:amount]
-	end
 	def all_plan
 		plans = Braintree::Plan.all	
 	end
 
-	def create_customer
-		result = Braintree::Subscription.create(params[:braintree])
-		if result.success?
-			respond_to do |format|
-				format.html{redirect_to transactions_new_path,flash[:success]=>"dfdfgdfgdfg"}
-			end
-		else
-			respond_to do |format|
-				format.html{redirect_to transactions_new_path,:flash => { :alert => "#{result.errors.map{|d| d.message}}" }  }
-			end
-		end
+	def create
 	end	
 
+	def offline_notification
+		
+	end
+	
 	def subregion_options
   		render partial: 'subregion_select'
 	end
