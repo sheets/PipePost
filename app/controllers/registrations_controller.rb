@@ -19,9 +19,9 @@ class RegistrationsController < Devise::RegistrationsController
 	end
 
 	def create
-		params[:user][:userprofile_attributes]=params[:user][:state] if params[:user][:state].present?
+		params[:user][:userprofile_attributes][:state]=params[:user][:state] if params[:user][:state].present?
 		attributeUserProfile=params[:user][:userprofile_attributes]
-		params[:user]=params[:user].except(:userprofile_attribu[:state],:card_name,:cvv,:exp_date,:state)
+		params[:user]=params[:user].except(:userprofile_attributes,:card_name,:cvv,:exp_date,:state)
 		@title="Sign up"
 		@breadcrumb=@title
 		@description="Lorem ipsum dolor sit amet"
@@ -72,7 +72,7 @@ class RegistrationsController < Devise::RegistrationsController
 				:company => "#{params[:user][:userprofile_attributes][:company_name]}",
 				:email => "#{params[:user][:email]}",
 				:phone => "#{params[:user][:userprofile_attributes][:phone]}",
-				:credit_card => {:cardholder_name=>"#{params[:user][:userprofile_attributes][:first_name]} #{params[:user][:userprofile_attributes][:last_name]}",:number => "#{params[:user][:card_name]}",:cvv => "#{params[:user][:cvv]}",:expiration_date =>"#{params[:user][:exp_date]}"
+				:credit_card => {:cardholder_name=>"#{params[:user][:userprofile_attributes][:first_name]} #{params[:user][:userprofile_attributes][:last_name]}",:number => "#{params[:braintree][:credit_card][:number]}",:cvv => "#{params[:braintree][:credit_card][:cvv]}",:expiration_date =>"#{params[:braintree][:credit_card][:expiration_date]}"
 				# :options => {:verify_card => true}
 				})
 			if result.success?
@@ -90,7 +90,7 @@ class RegistrationsController < Devise::RegistrationsController
 	end
 	# customer create ends here
 	def create_customer_entry
-		@user.build_customer(:customer_id=>@customer_key,:subscription_id=>@subscription_id).save!
+		@user.build_customer(:customer_id=>@customer_key,:subscription_id=>@subscription_id,:plan_id=>@plan.id).save!
 	end
 	def create_customer_subscription	
 

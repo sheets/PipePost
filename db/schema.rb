@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140127192016) do
+ActiveRecord::Schema.define(:version => 20140130205747) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20140127192016) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "subscription_id"
+    t.string   "plan_id"
   end
 
   add_index "customers", ["user_id"], :name => "index_cards_on_user_id"

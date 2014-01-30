@@ -82,7 +82,7 @@
               %span.add-on
                 %i.icon-calendar
           %div= f.submit "Sign up",:class=>'btn btn-extra-large btn-primary'
-
+%script{src: "https://js.braintreegateway.com/v1/braintree.js"}
 / = render "devise/shared/links"
 
 :css
@@ -108,4 +108,7 @@
     var url = "/transactions/subregion_options?parent_region="+country_code
     select_wrapper.load(url)
   });
-  $('select').selectpicker();
+  // braintree client side validations
+  var braintree = Braintree.create("MIIBCgKCAQEA1s2p5yYR5/AL1C8yJ3MKK3lOK9QU5TVy7rN+XwzA2QfyAHBQjr04GFUZQYc8Fm4HjPAOwLLbZkrllF+7rzdfXzzzDEYqOgFO9nMQLlc8VyZswjY9toeiqiwmDt9U5AdgvJRpAiw3MakS0ABXdrQOmu6LLoswZd99w1HhdjnRd8TZerCNcp/5r9bYILvErDrXLg7l6LUm9q9tO8ZZSF1zinN+ffkIIwXv6ReRiLXqE3kKgMyDn6VzvRosEIHDlgJvEkJjTdeLBz8yUmX2zJiI0JdOTpFvI8tHGHEqHu9eJqFWa82vrdpWI2IBCgd+OCKwA/Ke9FZXpQbRHKW4YBm1bwIDAQAB");
+  braintree.onSubmitEncryptForm("new_user");
+  $("#new_user").enableClientSideValidations();

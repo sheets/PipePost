@@ -1,0 +1,50 @@
+/ =render "/static_pages/partials/subheader"
+/ content begin
+#content
+	.container
+		%h1 
+			Subscription Detail
+		%span Status:
+		%span=@subscription.status
+		%br/
+		%span Balance:
+		%span=@subscription.balance.ceil
+		%br/
+		%span Plan name:
+		%span=current_user.plan_name
+		%br/
+		%span Billing_day_of_month:
+		%span=@subscription.billing_day_of_month
+		%br/
+		%span Billing_period_end_date:
+		%span=@subscription.billing_period_end_date
+		%br/
+		%span Billing_period_start_date:
+		%span=@subscription.billing_period_start_date
+		%br/
+		%span Current_billing_cycle:
+		%span=@subscription.current_billing_cycle
+		%br/
+		%span Next_bill_amount:
+		%span=@subscription.next_bill_amount
+		%br/
+		%span Dues:
+		%span=@subscription.days_past_due
+		%br/
+		%span Discounts:
+		%span=@subscription.discounts
+		%br/
+		%span Failure:
+		%span=@subscription.failure_count
+		%br/
+		%span Next_billing_date:
+		%span=@subscription.next_billing_date
+		%br/
+		=link_to "Cancel Subscription"
+		%br/
+		=link_to "Update Subscription"
+		%br/
+		=link_to "Change Card"
+		%br/
+			
+			

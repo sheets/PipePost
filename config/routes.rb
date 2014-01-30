@@ -20,12 +20,14 @@ Pipepost::Application.routes.draw do
   get "transactions/all_plan"
   post "transactions/offline_notification"=>"transactions#offline_notification"
   get 'transactions/subregion_options' => 'transactions#subregion_options'
+  get 'transactions/subscription_detail',:path=>:subscription_detail
   devise_scope :user do
     get 'sign_up/:plan'=>"registrations#new",:as=>:new_user_registration
   end
   
 
   resources :products, :path => :store, :only => [:index,:show]
+
 
 
 
