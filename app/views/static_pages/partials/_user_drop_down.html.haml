@@ -1,0 +1,21 @@
+.container
+  .row
+    .span6
+      %ul
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            -if user_signed_in?
+              ="Signed in as #{current_user.email}. Not you?"
+              %b.caret
+            -else
+              = link_to "Login", new_user_session_path
+          -if user_signed_in?
+            %ul.dropdown-menu
+              %li
+                = link_to "Sign out",destroy_user_session_path
+              %li
+                = link_to "My subscription",transactions_subscription_detail_path
+
+
+:javascript
+  $(".dropdown-toggle").dropdown('toggle');

@@ -11,34 +11,34 @@
             Account
             %span.id-color Details
           %div
-            = f.label :email
-            = f.email_field :email,:validate => true, :autofocus => true
+            = f.label :email,:class=>"required"
+            = f.email_field :email,:placeholder=>"Enter email",:validate => true, :autofocus => true
           %div
-            = f.label :password
-            = f.password_field :password,:validate => true
+            = f.label :password,:class=>"required"
+            = f.password_field :password,:validate => true,:placeholder=>"Enter password"
           %div
-            = f.label :password_confirmation
-            = f.password_field :password_confirmation
+            = f.label :password_confirmation,:class=>"required"
+            = f.password_field :password_confirmation,:placeholder=>"Re-enter password"
           = f.fields_for :userprofile do |profile|
             %div
               =hidden_field_tag :plan,params[:plan]
-              = profile.label :first_name
-              = profile.text_field :first_name,:validate => true
+              = profile.label :first_name,:class=>"required"
+              = profile.text_field :first_name,:placeholder=>"Enter first name",:validate => true
             %div
-              = profile.label :last_name
-              = profile.text_field :last_name,:validate => true
+              = profile.label :last_name,:class=>"required"
+              = profile.text_field :last_name,:validate => true,:placeholder=>"Enter last name"
             %div
               = profile.label :company_name
-              = profile.text_field :company_name
+              = profile.text_field :company_name,:placeholder=>"Enter company name"
             %div
-              = profile.label :age
+              = profile.label :age,:class=>"required"
               #dp3.input-append.date{"data-date-format" => "dd-mm-yyyy"}
                 = profile.text_field :age, size: "16",readonly: "readonly",:style=>"width:172px;"
                 %span.add-on
                   %i.icon-calendar
             %div
               = profile.label :phone
-              = profile.text_field :phone
+              = profile.text_field :phone,:placeholder=>"Enter phone number"
         .feature-box.span3
           = f.fields_for :userprofile do |profile|
             %i.icon-user.large.circle.black
@@ -46,37 +46,36 @@
               Personal
               %span.id-color Details
             %div
-              = profile.label :address
-              = profile.text_field :address
+              = profile.label :address,:class=>"required"
+              = profile.text_field :address,:placeholder=>"Enter address"
             %div
               = profile.label :mailing_address
-              = profile.text_field :mailing_address
+              = profile.text_field :mailing_address,:placeholder=>"Enter mailing address"
             %div
               = profile.label :country
               = profile.country_select :country, priority:'', prompt: 'Please select a country',:class=>"selectpicker"
             %div
               = profile.label :state
               = render 'transactions/subregion_select',:parent_region=>profile.object.country
-              / = profile.text_field :state
             %div
-              = profile.label :city
-              = profile.text_field :city
+              = profile.label :city,:class=>"required"
+              = profile.text_field :city,:placeholder=>"Enter city"
             %div
               = profile.label :zip
-              = profile.text_field :zip
+              = profile.text_field :zip,:placeholder=>"Enter zip"
         .feature-box.span3
           %i.icon-money.large.circle.black
           %h2
             Payment
             %span.id-color Details
           %div
-            %label Card Number
-            =f.text_field :card_name, autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text"
+            %label.required Card Number
+            =f.text_field :card_name, autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][number]", size: "20", type: "text",:placeholder=>"Enter card number"
           %div
-            %label CVV
-            =f.text_field :cvv,autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4"
+            %label.required CVV
+            =f.text_field :cvv,autocomplete: "off", "data-encrypted-name" => "braintree[credit_card][cvv]", size: "4",:placeholder=>"Enter CVV"
           %div
-            %label Expiration (MM/YYYY)
+            %label.required Expiration (MM/YYYY)
             #dp2.input-append.date{"data-date-format" => "mm/yyyy"}
               =f.text_field :exp_date,"data-encrypted-name" => "braintree[credit_card][expiration_date]",size: "16",readonly: "readonly",:style=>"width:172px;"
               %span.add-on
@@ -86,15 +85,7 @@
 / = render "devise/shared/links"
 
 :css
-  .subscription-table td{
-    padding-right:100px;
-  }
-  .field_with_errors input{
-    border: 1px dashed #FF624E;
-  }
-  .field_with_errors label.message{
-    display:none;
-  }
+
 :javascript
   $(function() {
     $('#dp3,#dp2').datepicker({

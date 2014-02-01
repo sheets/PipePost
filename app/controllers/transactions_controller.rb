@@ -33,9 +33,13 @@ class TransactionsController < ApplicationController
 		subscription = Braintree::Subscription.find(subscription_id)
 		
 		unless subscription.blank?
-			respond_to do |format|
-				format.html{@subscription=subscription}
-			end
+			@title="Subscription detail"
+		    @breadcrumb=@title
+		    @description="Lorem ipsum dolor sit amet"
+		    respond_to do |format|
+		      format.json
+		      format.html{@subscription=subscription}
+		    end
 		else
 			flash[:alert]="result.errors.map{|d| d}"
 			redirect_to :back

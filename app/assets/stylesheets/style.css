@@ -2513,3 +2513,15 @@ address span {
         width: 100%;
     }
 }
+
+/*some extra styles*/
+.subscription-table td{
+    padding-right:100px;
+}
+.field_with_errors input{
+border: 1px dashed #FF624E;
+}
+.field_with_errors label.message{
+display:none;
+}
+label.required:after{content:"*"}

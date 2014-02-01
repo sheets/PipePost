@@ -7,14 +7,7 @@
         %span.separator
         %strong Email:
         %a{href: "#"} contact@example.com
-        %span{:style=>"margin-left:130px; position:absolute;"}
-          -if user_signed_in?
-            ="Signed in as #{current_user.email}. Not you?"
-            = link_to "Sign out",destroy_user_session_path
-          -else
-            / = link_to "Sign up",new_user_registration_path('plan')
-            / ||
-            = link_to "Login", new_user_session_path
+          
       
       .span6.text-right
         .social-icons

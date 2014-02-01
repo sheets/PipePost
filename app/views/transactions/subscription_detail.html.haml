@@ -1,9 +1,14 @@
-/ =render "/static_pages/partials/subheader"
+=render "/static_pages/partials/subheader"
 / content begin
 #content
 	.container
-		%h1 
-			Subscription Detail
+		%span
+			=link_to "Cancel Subscription","#",:class=>"btn btn-primary"
+		%span
+			=link_to "Update Subscription","#",:class=>"btn btn-primary"
+		%span
+			=link_to "Change Card","#",:class=>"btn btn-primary"
+		%br/
 		%span Status:
 		%span=@subscription.status
 		%br/
@@ -40,11 +45,6 @@
 		%span Next_billing_date:
 		%span=@subscription.next_billing_date
 		%br/
-		=link_to "Cancel Subscription"
-		%br/
-		=link_to "Update Subscription"
-		%br/
-		=link_to "Change Card"
-		%br/
+		
 			
 			
