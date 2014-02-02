@@ -1,3 +1,4 @@
+-user_current_plan=((current_user.present?) && !(current_user.plan.blank?))? current_user.plan.plan_id : ''
 =render "/static_pages/partials/subheader"
 / content begin
 %form{:method=>"POST",:action=>transactions_new_path,:id=>"plan-form"}
@@ -109,7 +110,10 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: new_user_registration_path('monthly')} Order Now
+            -if user_current_plan=="1"
+              %a.btn.btn-disabled{href: "javascript:void"} Subscribed
+            -else
+              %a.btn.btn-primary{href: new_user_registration_path('monthly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box.pricing-featured
@@ -127,7 +131,10 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: new_user_registration_path('quarterly')} Order Now
+            -if user_current_plan=="2"
+              %a.btn.btn-disabled{href: "javascript:void"} Subscribed
+            -else
+              %a.btn.btn-primary{href: new_user_registration_path('quarterly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -145,7 +152,10 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: new_user_registration_path('yearly')} Order Now
+            -if user_current_plan=="3"
+              %a.btn.btn-disabled{href: "javascript:void"} Subscribed
+            -else
+              %a.btn.btn-primary{href: new_user_registration_path('yearly')} Order Now
       / pricing box close
       / pricing box begin
       .pricing-box
@@ -163,7 +173,10 @@
           %li Unlimited Mail
           %li 24/7 Free Support
           %li.btn-row
-            %a.btn.btn-primary{href: new_user_registration_path('lifetime')} Order Now
+            -if user_current_plan=="4"
+              %a.btn.btn-disabled{href: "javascript:void"} Subscribed
+            -else
+              %a.btn.btn-primary{href: new_user_registration_path('lifetime')} Order Now
       .clearfix
       / pricing box close
     / %hr.blank/
