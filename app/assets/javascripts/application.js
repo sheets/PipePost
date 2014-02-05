@@ -15,5 +15,8 @@
 //= require rails.validations
 //= require bootstrap-datepicker
 //= require fancybox
+jQuery(function() {
+  $("a.fancybox").fancybox();
+});
 
 
