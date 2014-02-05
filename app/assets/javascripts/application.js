@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require rails.validations
 //= require bootstrap-datepicker
+//= require fancybox
 
 

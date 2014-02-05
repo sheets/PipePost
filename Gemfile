@@ -22,6 +22,7 @@ gem 'client_side_validations'
 gem 'nested_form'
 gem 'carmen-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'fancybox-rails'
 
 
 # gem 'turbo-sprockets-rails3' ,:group=>:development

@@ -10,5 +10,10 @@
  *
  *= require_self
  *= require bootstrap-datepicker
+ *= require fancybox
  *= require_tree .
  */
+ 
+jQuery(function() {
+  $("a.fancybox").fancybox();
+});

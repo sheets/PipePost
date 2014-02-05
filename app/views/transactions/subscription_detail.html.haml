@@ -3,9 +3,9 @@
 #content
 	.container
 		%span
-			=link_to "Cancel Subscription","#",:class=>"btn btn-primary"
+			=link_to "Cancel Subscription",transactions_cancel_subscription_path,:class=>"btn btn-primary"
 		%span
-			=link_to "Update Subscription","#",:class=>"btn btn-primary"
+			=link_to "Update Subscription",transactions_plan_list_path(:format => 'js'),:class=>"fancybox btn btn-primary",:remote=>true
 		%span
 			=link_to "Change Card","#",:class=>"btn btn-primary"
 		%br/
